@@ -1,5 +1,11 @@
 # Exercise and Academic Performance in ADHD
 
+## Motivation
+
+The prevalence of Attention Deficit Hyperactivity Disorder (ADHD) among adolescents and emerging adults is on the rise. Academic performance is a critical component of self-esteem and future opportunities, and understanding the factors that influence it is essential for educators, parents, and healthcare providers.
+
+Physical exercise has been shown to offer numerous benefits for mental health and cognitive function. This project seeks to explore the relationship between physical activity and academic performance in students with ADHD, aiming to uncover insights that could lead to targeted interventions. If a positive correlation is established, it could encourage the integration of physical activity into educational settings as a means to enhance learning outcomes.
+
 ## Overview
 The **Exercise and Academic Performance in ADHD** project investigates the relationship between physical exercise and academic performance among adolescents and emerging adults diagnosed with Attention Deficit Hyperactivity Disorder (ADHD). The study aims to analyze how various physical activity metrics correlate with academic outcomes, specifically GPA, to provide insights that may inform interventions and support strategies for this population.
 
@@ -49,12 +55,6 @@ The analysis includes:
 - The overall model explains a relatively small portion of the variance in GPA (R-squared: 0.176), indicating that other factors not included in the model may also play significant roles in academic performance.
 - The t-test results show a statistically significant difference in GPA between high and low exercise groups, with a p-value of 0.0025.
 
-## License
-This project is open-sourced software licensed under the MIT license.
-
 ## Acknowledgments
-- Special thanks to the contributors and the open-source community for their invaluable resources and support.
-- This project is inspired by the principles of health psychology and the study of ADHD.
 
-## Contact
-For any inquiries or contributions, please contact [Your Name](mailto:your.email@example.com).
+- This project is inspired by the principles of health psychology and the study of ADHD.
