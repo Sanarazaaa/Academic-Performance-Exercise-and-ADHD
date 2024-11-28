@@ -38,57 +38,6 @@ To set up the project, follow these steps:
    pip install pandas seaborn matplotlib scipy statsmodels
    ```
 
-## Usage
-To run the analysis, execute the following Python script:
-
-```python
-import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
-from scipy import stats
-import statsmodels.api as sm
-
-# Load the dataset
-data = pd.read_csv('path_to_your_dataset.csv')  # Replace with your actual file path
-
-# Data cleaning and preparation
-data['GPA'].fillna(data['GPA'].mean(), inplace=True)
-data['Gender'] = data['Gender'].astype('category')
-
-# Descriptive statistics for physical activity
-physical_activity_stats = data[['Steps', 'Peak', 'Cardio', 'FatBurn', 'Minutes']].describe()
-print(physical_activity_stats)
-
-# Descriptive statistics for GPA
-gpa_stats = data['GPA'].describe()
-print(gpa_stats)
-
-# Visualization: Scatter plot of GPA vs. Minutes of Exercise
-sns.scatterplot(x='Minutes', y='GPA', data=data)
-plt.title('GPA vs. Minutes of Exercise')
-plt.show()
-
-# Correlation analysis
-correlation = data[['Steps', 'Peak', 'Cardio', 'FatBurn', 'Minutes', 'GPA']].corr()
-sns.heatmap(correlation, annot=True, cmap='coolwarm')
-plt.title('Correlation Matrix')
-plt.show()
-
-# T-test example comparing GPA based on exercise levels
-median_minutes = data['Minutes'].median()
-high_exercise = data[data['Minutes'] > median_minutes]['GPA']
-low_exercise = data[data['Minutes'] <= median_minutes]['GPA']
-t_stat, p_value = stats.ttest_ind(high_exercise, low_exercise)
-print(f'T-statistic: {t_stat}, P-value: {p_value}')
-
-# OLS Regression Analysis
-X = data[['Steps', 'Peak', 'Cardio', 'FatBurn', 'Minutes']]
-X = sm.add_constant(X)  # Add constant for intercept
-y = data['GPA']
-model = sm.OLS(y, X).fit()
-print(model.summary())
-```
-
 ## Data Analysis
 The analysis includes:
 - **Descriptive Statistics**: Summary of physical activity metrics and GPA.
